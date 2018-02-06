@@ -1,21 +1,47 @@
 ---
 title   : BitCoin Mining Using Enterprise Web Browser!
-banner  : /img/blog/Photoboxgroup_WhyChallenges_SquareRGB.png
+banner  : /pbx-group-security/blob/patch-2/static/img/blog/Bitcoin.jpg
 date    : 2018-02-06
-images  : ["pbx-group-security/static/img/blog/Photoboxgroup_WhyChallenges_SquareRGB.pngg"]
+images  : ["/pbx-group-security/blob/patch-2/static/img/blog/BitCoint.png"]
 author      : Naushad
 ---
 
-## BitCoin Mining Using Enterprise Web Browser!
-# Your Browser Could Be Mining Cryptocurrency
-
-![infographic](/static/img/blog/Pbx_Security_Infographic_Amendments_HD300ppp.jpg)
-
-## Background
-
-1 December 2017 – During routine DarkTrace SOC monitoring, an internal device was discovered to be connecting to hundreds of 100% rare domains, mainly on port 7874.  The majority of endpoints related to BitCoin and other online/crypto currencies as well as dynamic DNS. Some of the endpoint connections were also known infection sources. 
-
-According to Lily Hay Newman, in an article entitled Your Browser Could Be Mining Cryptocurrency for a Stranger, 
-
-
-![infographic](/static/img/blog/Pbx_Security_Infographic_Amendments_HD300ppp.jpg)
+<h1>BitCoin Mining Using Enterprise Web Browser!</h1>
+<h3>Your Browser Could Be Mining Cryptocurrency<br /></h3>
+<p>![infographic](/pbx-group-security/blob/patch-2/static/img/blog/BitCoint.png)</p>
+<h1>Background</h1>
+<p>1 December 2017 &ndash; During routine DarkTrace SOC monitoring, an internal device was discovered to be connecting to hundreds of 100% rare domains, mainly on port 7874. The majority of endpoints related to BitCoin and other online/crypto currencies as well as dynamic DNS. Some of the endpoint connections were also known infection sources.</p>
+<p>According to Lily Hay Newman, in an article entitled <em>Your Browser Could Be Mining Cryptocurrency for a Stranger</em>, </p>
+<table>
+<tbody>
+<tr>
+<td>
+<p>Malicious miners aren&rsquo;t new in themselves, but cryptojacking has exploded in popularity over the past few weeks, because it offers a clever twist. [...] the latest technique uses Javascript to start working instantly when you load a compromised web page. There's no immediate way to tell that the page has a hidden mining component, and you may not even notice any impact on performance, but someone has hijacked your devices&mdash;and electric bill&mdash;for digital profit.&rdquo; </p>
+<p>(<em>Wired</em>, 20 October 2017)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Root cause</strong><br />An employee accidentally installed BitCoin mining software on a PhotoBox device while connected to their home server. The employee realised what they had done, and deleted the software immediately. However, PhotoBox internal SOC analysis detected that over 3,500 Malicious DNS Queries had been made and sent from the PhotoBox server to BitCoin-related endpoint connections using a computer's resources to generate BitCoin blocks. At this point the incident became serious because it was possible to see the end-point connections of the machines<br /></p>
+<p><strong>Investigation results</strong></p>
+<p>While investigating the incident, we discovered that searches of, or visits to compromised websites, mainly about <em>JS coin mining methods, </em>&nbsp;were run on over 30 computers &ndash; BitCoin is topical at present. The devices used to run these seemingly innocent searches were flagged as infected. We concluded that up to 30 devices had the same BitCoin-mining Javascript running in the background &ndash; from having merely run a search, or visited a site that reported on Bitcoin made this a code-red incident. </p>
+<p>We discovered that malicious hackers could inject BitCoin mining Javascript into any vulnerable website, or create a fake social site which, when visited, kickstarts a sophisticated execution of the Javascript miner for the Blockchain embedded in the victim&rsquo;s website. &ldquo;The victim unknowingly runs the miner directly in the the background of their Browser. Victims have no idea they are solving hashes on behalf of a BitCoin mining pool zombie, or that their devices are being used without their knowledge or consent.&rdquo; (Newman<em>, Wired, </em>2017)</p>
+<p>Naturally, the victim will not profit from this sort of mining. This is similar to a recent BBC report that a branch of Starbucks in Buenos Aires, Argentina &ldquo;had its wi-fi service surreptitiously hijacked, and used customers&rsquo; computers&rsquo; processing power to create digital cash&rdquo;(Kelion, BBC, 2017). Although this highlights the risks of using public wi-fi, our scenario highlights the risk of merely running a search on BitCoin. </p>
+<p><strong>It&rsquo;s not just us and Starbucks, however</strong></p>
+<p>JScoinminer can detect JavaScript cryptocurrency miner running in web browsers. The JavaScript coin miner uses a high percentage of CPU and causes sluggish computer speed. The JavaScript loads in the browser when the user visits a web page hosting the currency miner JavaScript. The JavaScript runs as long as the user stays on the web page. While the website being visited is injected with the coin mining JavaScript, the website will be blocked by this signature. The computer system is not "infected" in the traditional sense. </p>
+<p>![infographic](/pbx-group-security/blob/patch-2/static/img/blog/BitCoin-Minnig.png)</p>
+<p><strong>So, what can you do?</strong> </p>
+<p>These sort of attacks pose a serious security threat and immediate action must be taken to limit further damage.</p>
+<p><strong>Affected</strong></p>
+<p>Various Windows platforms.<br /><br /><strong>Response</strong></p>
+<p>Close the browser tab where the detected URL is open. </p>
+<p>Do not visit the website known to be infected - the signature detects suspicious activities associated with PUA.JScoinminer. </p>
+<p>Alert your security team immediately - we are here to help, not judge.</p>
+<p><strong>MANUAL REMOVAL</strong></p>
+<ol>
+<li>Start the investigation by looking at your network traffic for the following suspicious domains - when you find this domain, apply KillSwitch to Block this domains and IP address associated with: <br />66.228.41.176 - <a href="http://www.malwareurl.com/ns_listing.php?ip=178.79.140.46">http://www.malwareurl.com/ns_listing.php?ip=178.79.140.46<br /></a>208.109.255.8 - <a href="http://www.malwareurl.com/ns_listing.php?ip=208.109.255.8">http://www.malwareurl.com/ns_listing.php?ip=208.109.255.8<br /></a>216.69.185.8 - <a href="http://www.malwareurl.com/ns_listing.php?ip=216.69.185.8">http://www.malwareurl.com/ns_listing.php?ip=216.69.185.8<br /></a>178.79.140.46 - <a href="http://www.malwareurl.com/ns_listing.php?ip=178.79.140.46">http://www.malwareurl.com/ns_listing.php?ip=178.79.140.46<br /></a>109.74.196.143 - <a href="https://virustotal.com/en/ip-address/109.74.196.143/information">https://virustotal.com/en/ip-address/109.74.196.143/information<br /></a>198.74.50.135 - <a href="https://virustotal.com/en/ip-address/198.74.50.135/information">https://virustotal.com/en/ip-address/198.74.50.135/information<br /><br /></a>awrcaverybrstuktdybstr.com <br /><a href="https://www.virustotal.com/#/url/c3db2a27c2dba11a57d9b4cb28cdd3c8b0bffbbda0b9cff1732826fb924ef07c/detection">https://www.virustotal.com/#/url/c3db2a27c2dba11a57d9b4cb28cdd3c8b0bffbbda0b9cff1732826fb924ef07c/detection<br /></a>ytioghfdghvcfgbgvdf.com<br /><a href="https://www.virustotal.com/#/url/3df4e4681f40e19d4ae577a4e11394eed3136f1e1f8c45fb794eaae0ec6c91a9/detection">https://www.virustotal.com/#/url/3df4e4681f40e19d4ae577a4e11394eed3136f1e1f8c45fb794eaae0ec6c91a9/detection<br /></a>awecerybtuitbyatr.com<br /><a href="https://www.virustotal.com/#/url/4d5371c680dac8091339547588e6f28618e8249381b43ffb568978d47c61ae61/detection">https://www.virustotal.com/#/url/4d5371c680dac8091339547588e6f28618e8249381b43ffb568978d47c61ae61/detection<br /></a>qwevrbyitntbyjdtyhvsdtrhr.com<br /><a href="https://www.virustotal.com/#/url/690129c79c50042c90f2d535aa21e9f7a3dbc4457d32f62246f2a54a7f2a8826/detection">https://www.virustotal.com/#/url/690129c79c50042c90f2d535aa21e9f7a3dbc4457d32f62246f2a54a7f2a8826/detection<br /></a>yeiolertxwerh.com<br /><a href="https://www.virustotal.com/#/url/03cc6d05978ccc76c49f3b96e081c0246ce20883be231b521186ca8b89762a19/detection">https://www.virustotal.com/#/url/03cc6d05978ccc76c49f3b96e081c0246ce20883be231b521186ca8b89762a19/detection<br /><br /></a></li>
+<li>Perform a full system scan, using multiple Antivirus scanner </li>
+</ol>
+<p><strong>References</strong></p>
+<p>Hay Newman, Lily: &ldquo;Your Browser Could be Mining Cryptocurrency for a Stranger&rdquo; in <em>Wired</em>, 20 October 2017; available online <a href="https://www.wired.com/story/cryptojacking-cryptocurrency-mining-browser/">here</a></p>
+<p>Kelion, Leo: &ldquo;Starbucks cafe's wi-fi made computers mine crypto-currency&rdquo; in<em> BBC News</em>, 13 December 2017; available online <a href="http://www.bbc.com/news/technology-42338754">here</a></p>
